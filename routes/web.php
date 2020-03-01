@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
+
+Route::get('/','Homecontroller@index');
 
 Auth::routes();
 
@@ -29,4 +29,23 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
         Route::get('/','AdminController@listUsers');
         Route::post('/AddUser','AdminController@addUser');
     });
+
+
+    Route::group(['prefix' => 'courses'], function() {
+
+        Route::get('/','CourseController@index');
+        Route::post('/store','CourseController@store');
+    });
+
+
+
+    Route::group(['prefix' => 'fees'], function() {
+
+        Route::get('/','FeesController@index');
+        Route::post('/store','FeesController@store');
+
+        Route::get('/delete/{fee}','FeesController@delete');
+    });
+
+
 });

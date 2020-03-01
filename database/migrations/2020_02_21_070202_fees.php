@@ -13,8 +13,12 @@ class Fees extends Migration
      */
     public function up()
     {
-        Schema::create('Fee_details', function (Blueprint $table) {
-            $table->integer('roll_no')->references('roll_no')->on('Record');
+        Schema::create('fee_details', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('student_id');
+            $table->integer('course_id');
+            $table->text('amount_paid');
+            $table->text('amount_due');
 
             $table->timestamps();
         });
@@ -27,6 +31,6 @@ class Fees extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Fee_details');
+        Schema::dropIfExists('fee_details');
     }
 }

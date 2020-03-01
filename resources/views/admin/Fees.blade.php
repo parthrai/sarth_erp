@@ -5,36 +5,48 @@
     <!------------------------- Modals ------------------------>
 
     <!-- addUser -->
-    <div id="addUser" class="modal fade" role="dialog">
+    <div id="addFees" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
 
                 <div class="modal-body">
-                    <form action="/admin/users/AddUser" method="post">
+                    <form action="/admin/fees/store" method="post">
                         {{csrf_field()}}
 
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" required name="name" class="form-control" >
-                        </div>
+                            <label for="name">Student</label>
 
-                        <div class="form-group">
-                            <label for="email">Email address:</label>
-                            <input type="email" required name="email" class="form-control" >
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="type">Type:</label>
-
-                            <select class="form-control" name="type" required >
-                                <option value="admin">Admin</option>
-                                <option value="teacher">Teacher</option>
-                                <option value="student">Student</option>
+                            <select  class="form-control" required name="student_id">
+                                <option selected>Select Users</option>
+                                @foreach($students as $student)
+                                    <option value="{{$student->id}}">{{$student->name}}</option>
+                                @endforeach
 
                             </select>
+
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Course</label>
+
+                            <select  class="form-control" required name="course_id">
+                                <option selected>Select Course</option>
+
+                                @foreach($courses as $course)
+                                    <option value="{{$course->id}}">{{$course->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="type">Amount</label>
+                            <input type="name" required name="amount_paid" class="form-control" >
+
+
 
                         </div>
 
@@ -86,33 +98,40 @@
 
 
 
-                @if(count($users) > 0)
+                    @if(count($fees) > 0)
 
                         <div class="row justify-content-center">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addUser">Add User</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addFees">Add Fees</button>
 
                                 <table class="table table-hover">
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Type</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
+                                        <th>Student</th>
+                                        <th>Course</th>
+                                        <th>Total Fee</th>
+                                        <th>Amount Paid</th>
+                                        <th>Amount Due</th>
                                         <th>Date</th>
+                                        <th>Action</th>
 
                                     </tr>
                                     </thead>
                                     <tbody>
 
-                                    @foreach($users as $user)
+                                    @foreach($fees as $fee)
                                         <tr>
 
-                                            <td><a href="/admin/users/{{$user->id}}" target="_blank">{{$user->id}}</a></td>
-                                            <td><a href="/admin/users/{{$user->id}}">{{$user->type}}</a></td>
-                                            <td><a href="/admin/users/{{$user->id}}">{{$user->name}}</a></td>
-                                            <td>{{$user->email}}</td>
-                                            <td>{{$user->created_at}}</td>
+                                            <td><a href="#" >{{$fee->id}}</a></td>
+                                            <td><a href="#">{{$fee->student->name}}</a></td>
+                                            <td>{{$fee->course->name}}</td>
+                                            <td>Rs {{$fee->course->fees}}</td>
+                                            <td>Rs {{$fee->amount_paid}}</td>
+                                            <td>Rs {{$fee->amount_due}}</td>
+
+                                            <td>{{$fee->created_at}}</td>
+                                            <td><a href="/admin/fees/delete/{{$fee->id}}" class="btn btn-danger">X</a></td>
 
                                         </tr>
                                     @endforeach
@@ -126,15 +145,17 @@
 
                         <div class="row justify-content-center">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addUser">Add User</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addFees">Add Fees</button>
 
                                 <table class="table table-hover">
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Type</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
+                                        <th>Student</th>
+                                        <th>Course</th>
+                                        <th>Total Fee</th>
+                                        <th>Amount Paid</th>
+                                        <th>Amount Due</th>
                                         <th>Date</th>
 
                                     </tr>
@@ -147,7 +168,7 @@
                             </div>
 
                             <div class="col-lg-12 text-center">
-                                <h3>No Users ...</h3>
+                                <h3>No fees ...</h3>
                                 <img src="{{asset('images/no_items.png')}}" height="280px" width="480px">
 
                             </div>

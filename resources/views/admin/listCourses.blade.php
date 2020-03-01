@@ -5,14 +5,14 @@
     <!------------------------- Modals ------------------------>
 
     <!-- addUser -->
-    <div id="addUser" class="modal fade" role="dialog">
+    <div id="addCourse" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
 
                 <div class="modal-body">
-                    <form action="/admin/users/AddUser" method="post">
+                    <form action="/admin/courses/store" method="post">
                         {{csrf_field()}}
 
                         <div class="form-group">
@@ -21,20 +21,16 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email address:</label>
-                            <input type="email" required name="email" class="form-control" >
+                            <label for="email">Duration</label>
+                            <input type="name" required name="duration" class="form-control" >
                         </div>
 
 
                         <div class="form-group">
-                            <label for="type">Type:</label>
+                            <label for="type">Fees</label>
+                            <input type="name" required name="fees" class="form-control" >
 
-                            <select class="form-control" name="type" required >
-                                <option value="admin">Admin</option>
-                                <option value="teacher">Teacher</option>
-                                <option value="student">Student</option>
 
-                            </select>
 
                         </div>
 
@@ -86,33 +82,33 @@
 
 
 
-                @if(count($users) > 0)
+                    @if(count($courses) > 0)
 
                         <div class="row justify-content-center">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addUser">Add User</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addCourse">Add Course</button>
 
                                 <table class="table table-hover">
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Type</th>
                                         <th>Name</th>
-                                        <th>Email</th>
+                                        <th>Duration</th>
+                                        <th>Fees</th>
                                         <th>Date</th>
 
                                     </tr>
                                     </thead>
                                     <tbody>
 
-                                    @foreach($users as $user)
+                                    @foreach($courses as $course)
                                         <tr>
 
-                                            <td><a href="/admin/users/{{$user->id}}" target="_blank">{{$user->id}}</a></td>
-                                            <td><a href="/admin/users/{{$user->id}}">{{$user->type}}</a></td>
-                                            <td><a href="/admin/users/{{$user->id}}">{{$user->name}}</a></td>
-                                            <td>{{$user->email}}</td>
-                                            <td>{{$user->created_at}}</td>
+                                            <td><a href="#" >{{$course->id}}</a></td>
+                                            <td><a href="#">{{$course->name}}</a></td>
+                                            <td>{{$course->duration}}</td>
+                                            <td>Rs {{$course->fees}}</td>
+                                            <td>{{$course->created_at}}</td>
 
                                         </tr>
                                     @endforeach
@@ -126,15 +122,15 @@
 
                         <div class="row justify-content-center">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addUser">Add User</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addCourse">Add course</button>
 
                                 <table class="table table-hover">
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Type</th>
                                         <th>Name</th>
-                                        <th>Email</th>
+                                        <th>Duration</th>
+                                        <th>Fees</th>
                                         <th>Date</th>
 
                                     </tr>
@@ -147,7 +143,7 @@
                             </div>
 
                             <div class="col-lg-12 text-center">
-                                <h3>No Users ...</h3>
+                                <h3>No Courses ...</h3>
                                 <img src="{{asset('images/no_items.png')}}" height="280px" width="480px">
 
                             </div>
