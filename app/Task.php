@@ -8,12 +8,12 @@ class Task extends Model
 {
     //
 
-    public function user(){
-        return $this->belongsTo(User::class,'user_id');
+    public function student(){
+        return $this->belongsTo(User::class,'student_id');
     }
 
 
     public function course(){
-        return $this->belongsTo(Course::class,'courser_id');
+        return $this->belongsTo(Course::class,'course_id');
     }
 }

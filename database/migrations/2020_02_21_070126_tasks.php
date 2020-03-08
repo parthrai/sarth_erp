@@ -17,10 +17,9 @@ class Tasks extends Migration
            // $table->integer('roll_no')->references('roll_no')->on('Record');
             $table->bigIncrements('id');
             $table->integer('user_id');
-            //$table->string('Subject_Name')->references('Subject_Name')->on('Attendance');
-            $table->integer('course_id');
-           // $table->date('Date')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string("homework");
+            $table->string('user_name');
+            $table->integer('course_name');
+            $table->string("task");
             $table->timestamps();
         });
     }

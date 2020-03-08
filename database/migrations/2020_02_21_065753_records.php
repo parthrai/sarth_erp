@@ -16,10 +16,11 @@ class Records extends Migration
         Schema::create('records', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
-
+            $table->string('user_name');
             $table->string('father_name');
             $table->string('mother_name');
-            $table->string('mob');
+            $table->string('email')->unique();
+            $table->string('mob')->unique();
             $table->string('dob');
             $table->string('age');
             $table->string('gender');
@@ -27,7 +28,6 @@ class Records extends Migration
             $table->string('city');
             $table->string('zip_code');
             $table->string('state');
-
             $table->timestamps();
         });
     }

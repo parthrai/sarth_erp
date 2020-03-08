@@ -5,37 +5,37 @@
     <!------------------------- Modals ------------------------>
 
     <!-- addUser -->
-    <div id="addCourse" class="modal fade" role="dialog">
+    <div id="addStudents" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
 
                 <div class="modal-body">
-                    <form action="/admin/courses/store" method="post">
+                    <form action="/admin/students/store" method="post">
                         {{csrf_field()}}
 
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" autocomplete="off" required name="name" class="form-control" >
+                            <label for="name">ID</label>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Duration</label>
-                            <input type="name" autocomplete="off" required name="duration" class="form-control" >
+                            <label for="course">User</label>
+
+                            <select  class="form-control" required name="course_id">
+                                <option selected>Select Course</option>
+
+                                @foreach($courses as $course)
+                                    <option value="{{$course->id}}">{{$course->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="type">Fees</label>
-                            <input type="name" autocomplete="off" required name="fees" class="form-control" >
-
-
-
+                            <label for="type">Father Name  :</label>
+                            <input type="name" required name="father_name" class="form-control" >
                         </div>
-
-
-
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Add</button>
@@ -82,33 +82,40 @@
 
 
 
-                    @if(count($courses) > 0)
+                    @if(count($fees) > 0)
 
                         <div class="row justify-content-center">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addCourse">Add Course</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addFees">Add Fees</button>
 
-                                <table class="table table-hover">
+                                <table class="table table-hover" >
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th>Duration</th>
-                                        <th>Fees</th>
+                                        <th>Student</th>
+                                        <th>Course</th>
+                                        <th>Total Fee</th>
+                                        <th>Amount Paid</th>
+                                        <th>Amount Due</th>
                                         <th>Date</th>
+                                        <th>Action</th>
 
                                     </tr>
                                     </thead>
                                     <tbody>
 
-                                    @foreach($courses as $course)
+                                    @foreach($fees as $fee)
                                         <tr>
 
-                                            <td><a href="#" >{{$course->id}}</a></td>
-                                            <td><a href="#">{{$course->name}}</a></td>
-                                            <td>{{$course->duration}}</td>
-                                            <td>Rs {{$course->fees}}</td>
-                                            <td>{{$course->created_at}}</td>
+                                            <td><a href="#" >{{$fee->id}}</a></td>
+                                            <td><a href="#">{{$fee->student->name}}</a></td>
+                                            <td>{{$fee->course->name}}</td>
+                                            <td>Rs {{$fee->course->fees}}</td>
+                                            <td>Rs {{$fee->amount_paid}}</td>
+                                            <td>Rs {{$fee->amount_due}}</td>
+
+                                            <td>{{$fee->created_at}}</td>
+                                            <td><a href="/admin/fees/delete/{{$fee->id}}" class="btn btn-danger">X</a></td>
 
                                         </tr>
                                     @endforeach
@@ -122,15 +129,17 @@
 
                         <div class="row justify-content-center">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addCourse">Add course</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addFees">Add Fees</button>
 
                                 <table class="table table-hover">
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th>Duration</th>
-                                        <th>Fees</th>
+                                        <th>Student</th>
+                                        <th>Course</th>
+                                        <th>Total Fee</th>
+                                        <th>Amount Paid</th>
+                                        <th>Amount Due</th>
                                         <th>Date</th>
 
                                     </tr>
@@ -143,7 +152,7 @@
                             </div>
 
                             <div class="col-lg-12 text-center">
-                                <h3>No Courses ...</h3>
+                                <h3>No fees ...</h3>
                                 <img src="{{asset('images/no_items.png')}}" height="280px" width="480px">
 
                             </div>

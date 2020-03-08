@@ -12,4 +12,9 @@ class Attendance extends Model
 
         return $this->belongsTo(User::class);
     }
+
+    public function course_to_join(){
+
+        return $this->belongsTo(Course::class);
+    }
 }

@@ -15,8 +15,8 @@ class Course extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('duration');
             $table->string('name')->unique();
+            $table->string('duration');
             $table ->string('fees');
             $table->timestamps();
         });
