@@ -15,9 +15,9 @@ class Teacher extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id'); //as in teacher id
-            //$table->string('Course_name')->references('course_name')->on('Courses');
-            $table->integer('course_id');
+            $table->integer('user_id');
+            $table->integer('user_name');
+            $table->integer('course_name');
             $table->string('education');
             $table->string('salary');
             $table->timestamps();

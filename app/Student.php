@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class  Record extends Model
+class Student extends Model
 {
     //
-
 
     public function user(){
 

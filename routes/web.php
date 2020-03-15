@@ -47,6 +47,24 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
         Route::get('/delete/{fee}','FeesController@delete');
     });
 
+    Route::group(['prefix' => 'attendances'], function() {
+
+        Route::get('/','AttendanceController@index');
+        Route::post('/store','AttendanceController@store');
+        Route::get('/details','AttendanceController@detail');
+    });
+
+    Route::group(['prefix' => 'tasks'], function() {
+
+        Route::get('/','TaskController@index');
+        Route::post('/store','TaskController@store');
+    });
+
+    Route::group(['prefix' => 'students'], function() {
+
+        Route::get('/','StudentController@index');
+        Route::post('/store','StudentController@store');
+    });
 
 });
 

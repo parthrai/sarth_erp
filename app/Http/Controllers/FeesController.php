@@ -21,7 +21,6 @@ class FeesController extends Controller
         return view('admin.Fees')->with(['fees'=>$fees,'students'=>$students,'courses'=>$courses]);
     }
 
-
     public function store(Request $request){
 
         $course = Course::find($request->course_id);

@@ -44,14 +44,8 @@
 
                         <div class="form-group">
                             <label for="type">Amount</label>
-                            <input type="name" required name="amount_paid" class="form-control" >
-
-
-
+                            <input type="name" autocomplete="off" required name="amount_paid" class="form-control" >
                         </div>
-
-
-
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Add</button>
@@ -104,7 +98,7 @@
                             <div class="col-md-12">
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addFees">Add Fees</button>
 
-                                <table class="table table-hover">
+                                <table class="table table-hover" >
                                     <thead>
                                     <tr>
                                         <th>#</th>

@@ -5,37 +5,53 @@
     <!------------------------- Modals ------------------------>
 
     <!-- addUser -->
-    <div id="addCourse" class="modal fade" role="dialog">
+    <div id="addTask" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
 
                 <div class="modal-body">
-                    <form action="/admin/courses/store" method="post">
+                    <form action="/admin/tasks/store" method="post">
                         {{csrf_field()}}
 
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" autocomplete="off" required name="name" class="form-control" >
+                            <label for="id">Student Id : </label>
+                            <select  class="form-control  input-lg dynamic" required name="student_id" data-dependent="name">
+                                <option selected>Select Users</option>
+                                @foreach($students as $student)
+                                    var pop = <option value="{{$student->id}}">{{$student->id}}</option>
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Duration</label>
-                            <input type="name" autocomplete="off" required name="duration" class="form-control" >
+                            <label for="name">Student Name : </label>
+                            <select  class="form-control input-lg dynamic" id="name" required name="student_name">
+                                <option selected>Select Users</option>
+                                @foreach($students as $student)
+                                    var pop = <option value="{{$student->id}}">{{$student->name}}</option>
+                                @endforeach
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="course_name">Course Name : </label>
+                            <select  class="form-control" required name="course_id">
+                                <option selected>Select Course</option>
+
+                                @foreach($courses as $course)
+                                    <option value="{{$course->id}}">{{$course->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="type">Fees</label>
-                            <input type="name" autocomplete="off" required name="fees" class="form-control" >
-
-
-
+                            <label for="task">Homework : </label>
+                            <input type="text" autocomplete="off" required name="task" class="form-control" >
                         </div>
-
-
-
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Add</button>
@@ -82,33 +98,34 @@
 
 
 
-                    @if(count($courses) > 0)
+                    @if(count($tasks) > 0)
 
                         <div class="row justify-content-center">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addCourse">Add Course</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addTask">Add Task</button>
 
                                 <table class="table table-hover">
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th>Duration</th>
-                                        <th>Fees</th>
+                                        <th>Student Id</th>
+                                        <th>Student Name</th>
+                                        <th>Course</th>
+                                        <th>Task</th>
                                         <th>Date</th>
 
                                     </tr>
                                     </thead>
                                     <tbody>
 
-                                    @foreach($courses as $course)
+                                    @foreach($tasks as $task)
                                         <tr>
 
-                                            <td><a href="#" >{{$course->id}}</a></td>
-                                            <td><a href="#">{{$course->name}}</a></td>
-                                            <td>{{$course->duration}}</td>
-                                            <td>Rs {{$course->fees}}</td>
-                                            <td>{{$course->created_at}}</td>
+                                            <td><a href="/admin/tasks/{{$task->student_id}}" target="_blank">{{$task->student_id}}</a></td>
+                                            <td><a href="/admin/tasks/{{$task->student_name}}" target="_blank">{{$task->student_name}}</a></td>
+                                            <td><a href="/admin/tasks/{{$task->course_name}}">{{$task->course_name}}</a></td>
+                                            <td><a href="/admin/tasks/{{$task->name}}">{{$task->name}}</a></td>
+                                            <td>{{$task->created_at}}</td>
 
                                         </tr>
                                     @endforeach
@@ -122,15 +139,16 @@
 
                         <div class="row justify-content-center">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addCourse">Add course</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addTask">Add Task</button>
 
                                 <table class="table table-hover">
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th>Duration</th>
-                                        <th>Fees</th>
+                                        <th>Student Id</th>
+                                        <th>Student Name</th>
+                                        <th>Course</th>
+                                        <th>Task</th>
                                         <th>Date</th>
 
                                     </tr>
@@ -143,7 +161,7 @@
                             </div>
 
                             <div class="col-lg-12 text-center">
-                                <h3>No Courses ...</h3>
+                                <h3>No Tasks ...</h3>
                                 <img src="{{asset('images/no_items.png')}}" height="280px" width="480px">
 
                             </div>

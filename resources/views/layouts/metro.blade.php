@@ -14,7 +14,7 @@
     <meta charset="utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('','ERP System') }}</title>
     <meta name="description" content="Latest updates and statistic charts">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -129,10 +129,11 @@
                     <ul class="kt-menu__nav ">
                         <li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="/" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-gear"></i><span class="kt-menu__link-text">Dashboard</span></a></li>
                         <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/admin/users" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-avatar"></i><span class="kt-menu__link-text">Users</span></a></li>
-                        <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/admin/" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text">Quotations</span></a></li>
-                        <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/admin/designs" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-layers-1"></i><span class="kt-menu__link-text">Designs</span></a></li>
-                        <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/admin/documents" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-layers-1"></i><span class="kt-menu__link-text">Documents</span></a></li>
-                        <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/admin/invoices" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-mail-1"></i><span class="kt-menu__link-text">Invoices</span></a></li>
+                        <li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="/admin/students" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-gear"></i><span class="kt-menu__link-text">Students</span></a></li>
+                        <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/admin/courses" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text">Courses</span></a></li>
+                        <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/admin/fees" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-layers-1"></i><span class="kt-menu__link-text">Fees</span></a></li>
+                        <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/admin/attendances" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-layers-1"></i><span class="kt-menu__link-text">Attendance</span></a></li>
+                        <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/admin/tasks" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-mail-1"></i><span class="kt-menu__link-text">Tasks</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -150,12 +151,7 @@
                 <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
                 <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
                     <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-tab ">
-                        <ul class="kt-menu__nav ">
-                            <li class="kt-menu__item  kt-menu__item--active " aria-haspopup="true"><a href="/" class="kt-menu__link "><span class="kt-menu__link-text">Dashboardl</span></a></li>
-                            <li class="kt-menu__item  kt-menu__item--active " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Quotations</span></a></li>
-                            <li class="kt-menu__item  kt-menu__item--active " aria-haspopup="true"><a href="/designs" class="kt-menu__link "><span class="kt-menu__link-text">Designs</span></a></li>
-                            <li class="kt-menu__item  kt-menu__item--active " aria-haspopup="true"><a href="/invoices" class="kt-menu__link "><span class="kt-menu__link-text">Invoices</span></a></li>
-                        </ul>
+                        <b>ACADEMIC PATHWAYS</b>
                     </div>
                 </div>
 
@@ -213,34 +209,6 @@
                                         </div>
                                         <div class="kt-notification__item-time">
                                             Account settings and more
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon">
-                                        <i class="flaticon2-mail kt-font-warning"></i>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title kt-font-bold">
-                                            My Messages
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            Inbox and tasks
-                                        </div>
-                                    </div>
-                                </a>
-
-
-                                <a href="#" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon">
-                                        <i class="flaticon2-cardiogram kt-font-warning"></i>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title kt-font-bold">
-                                            Billing
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            billing & statements <span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill kt-badge--rounded">2 pending</span>
                                         </div>
                                     </div>
                                 </a>
@@ -421,9 +389,7 @@
             <!-- begin:: Footer -->
             <div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="kt_footer">
                 <div class="kt-container  kt-container--fluid ">
-                    <div class="kt-footer__copyright">
-                        {{ now()->year }} &nbsp;&copy;&nbsp;<a href="#" target="_blank" class="kt-link">{{ config('app.name', 'Laravel') }}</a>
-                    </div>
+                    <div class="kt-footer__copyright"></div>
                     <div class="kt-footer__menu">
                         <a href="#" target="_blank" class="kt-footer__menu-link kt-link">About</a>
                         <a href="#" target="_blank" class="kt-footer__menu-link kt-link">Team</a>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffd6c45e-41a4-4d31-9118-36f278f700e4" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/resources/views/layouts/user.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/users/fees.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/users/tasks.blade.php" afterDir="false" />
@@ -100,6 +101,31 @@
     <ignored path="$PROJECT_DIR$/vendor/vlucas/phpdotenv/" />
     <ignored path="$PROJECT_DIR$/vendor/webmozart/assert/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+=======
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/listAttendance.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/listAttendancedetails.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/listStudent.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/listTask.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ERP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ERP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Attendance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Attendance.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FeesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FeesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Record.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Record.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_21_065753_records.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_065753_records.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_21_070103_attendances.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_070103_attendances.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_21_070126_tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_070126_tasks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_21_190356_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_190356_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_21_191216_teacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_191216_teacher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/Fees.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/Fees.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/listCourses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/listCourses.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/metro.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/metro.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
+>>>>>>> 1b3917b3f0a9ba7a08d200b1ed9d29a7ba310d72
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +133,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+<<<<<<< HEAD
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -215,10 +242,16 @@
       <find>Add</find>
       <find>Dashboard</find>
     </findStrings>
+=======
+    <execution>
+      <executable />
+    </execution>
+>>>>>>> 1b3917b3f0a9ba7a08d200b1ed9d29a7ba310d72
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -258,6 +291,8 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> 1b3917b3f0a9ba7a08d200b1ed9d29a7ba310d72
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
@@ -349,16 +384,11 @@
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="123" />
-    <option name="y" value="87" />
-    <option name="width" value="1351" />
-    <option name="height" value="798" />
-  </component>
   <component name="ProjectId" id="1Y5QfwchMF2CtcsaE2bQF8Oj4l0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -437,6 +467,8 @@
       <pane id="Scope" />
     </panes>
   </component>
+=======
+>>>>>>> 1b3917b3f0a9ba7a08d200b1ed9d29a7ba310d72
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -462,18 +494,6 @@
       <recent name="C:\xamp\htdocs\ERP\resources\views\layouts" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -492,6 +512,7 @@
       <updated>1582230085144</updated>
       <workItem from="1582230105293" duration="9577000" />
       <workItem from="1582499841787" duration="5406000" />
+<<<<<<< HEAD
       <workItem from="1583031992619" duration="4607000" />
       <workItem from="1584284565149" duration="2593000" />
     </task>
@@ -527,26 +548,56 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
     </layout>
   </component>
+=======
+      <workItem from="1583031992619" duration="4394000" />
+      <workItem from="1583037618082" duration="916000" />
+      <workItem from="1583095833882" duration="44000" />
+      <workItem from="1583095912526" duration="29199000" />
+    </task>
+    <servers />
+  </component>
+>>>>>>> 1b3917b3f0a9ba7a08d200b1ed9d29a7ba310d72
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583331989335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583331989335" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1582269683029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582269683029" />
-    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1582270276585">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1583223633712">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582270276585" />
-    <state x="378" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1582230109631">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583223633712" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1583223633712">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582230109631" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583223633712" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1583223633712">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583223633712" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1583223633712">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583223633712" />
+    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1583322878169">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1583322878169" />
+    <state x="378" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1583095921123">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583095921123" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1582311295241">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1366.728@0.0.1366.728" timestamp="1582311295241" />
+<<<<<<< HEAD
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env.example">
@@ -810,5 +861,11 @@
         </state>
       </provider>
     </entry>
+=======
+    <state x="339" y="162" key="run.anything.popup" timestamp="1583217943029">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1583217943029" />
+>>>>>>> 1b3917b3f0a9ba7a08d200b1ed9d29a7ba310d72
   </component>
 </project>

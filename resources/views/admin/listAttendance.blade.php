@@ -5,46 +5,39 @@
     <!------------------------- Modals ------------------------>
 
     <!-- addUser -->
-    <div id="addCourse" class="modal fade" role="dialog">
+    <div id="addAttendance" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
 
                 <div class="modal-body">
-                    <form action="/admin/courses/store" method="post">
+                    <form action="/admin/attendance/store" method="post">
                         {{csrf_field()}}
 
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" autocomplete="off" required name="name" class="form-control" >
+                            <label for="name">Course Name :</label>
+                            <input type="text" required name="name" class="form-control" >
                         </div>
 
                         <div class="form-group">
                             <label for="email">Duration</label>
-                            <input type="name" autocomplete="off" required name="duration" class="form-control" >
+                            <input type="name" required name="duration" class="form-control" >
                         </div>
-
 
                         <div class="form-group">
                             <label for="type">Fees</label>
-                            <input type="name" autocomplete="off" required name="fees" class="form-control" >
-
-
-
+                            <input type="name" required name="fees" class="form-control" >
                         </div>
-
-
-
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Add</button>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+                  </form>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
             </div>
 
         </div>
@@ -93,9 +86,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
-                                        <th>Duration</th>
-                                        <th>Fees</th>
-                                        <th>Date</th>
+
 
                                     </tr>
                                     </thead>
@@ -105,10 +96,8 @@
                                         <tr>
 
                                             <td><a href="#" >{{$course->id}}</a></td>
-                                            <td><a href="#">{{$course->name}}</a></td>
-                                            <td>{{$course->duration}}</td>
-                                            <td>Rs {{$course->fees}}</td>
-                                            <td>{{$course->created_at}}</td>
+                                            <td><a href="/admin/attendances/details">{{$course->name}}</a></td>
+
 
                                         </tr>
                                     @endforeach

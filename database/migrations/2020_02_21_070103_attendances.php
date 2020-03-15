@@ -14,12 +14,10 @@ class Attendances extends Migration
     public function up()
     {
         Schema::create('attendances', function (Blueprint $table) {
-           // $table->integer('roll_no')->references('roll_no')->on('Record');
             $table->bigIncrements('id');
             $table->integer('user_id');
-            $table->string('course_id');
-           // $table->date('date')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('status');
+            $table->string('course_name');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @extends('layouts.user')
+=======
+@extends('layouts.metro')
+>>>>>>> 1b3917b3f0a9ba7a08d200b1ed9d29a7ba310d72
 
 @section('content')
 
