@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,7 +29,11 @@ class HomeController extends Controller
             return view('home');
 
         }else{
-            return view('users.home');
+
+            $total_tasks = Task::where('user_id',Auth::user()->id)->count();
+
+
+            return view('users.home')->with(['tasks'=>$total_tasks]);
 
         }
     }

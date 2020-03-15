@@ -49,3 +49,13 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
 
 
 });
+
+
+Route::group(['middleware'=>'auth'],function(){
+
+    Route::get('/tasks','UsersController@tasks');
+    Route::get('/fees','UsersController@fees');
+
+
+});
+
