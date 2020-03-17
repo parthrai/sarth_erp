@@ -16,6 +16,7 @@
 Route::get('/','Homecontroller@index');
 
 Auth::routes();
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -35,6 +36,10 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
 
         Route::get('/','CourseController@index');
         Route::post('/store','CourseController@store');
+
+        Route::get('/{course}','CourseController@show');
+
+        Route::post('/enroll','CourseController@enroll');
     });
 
 
@@ -76,4 +81,6 @@ Route::group(['middleware'=>'auth'],function(){
 
 
 });
+
+route::get('/test','UsersController@test');
 

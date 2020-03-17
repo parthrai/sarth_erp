@@ -16,6 +16,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Course</th>
+                            <th>Course Fee</th>
                             <th>Amount Paid</th>
                             <th>Amount Due</th>
                             <th>Date</th>
@@ -27,8 +28,9 @@
                             <tr>
                                 <td>{{$fee->id}}</td>
                                 <td>{{$fee->course->name}}</td>
-                                <td>{{$fee->amount_paid}}</td>
-                                <td>{{$fee->amount_due}}</td>
+                                <td>Rs {{$fee->course->fees}}</td>
+                                <td>Rs {{$fee->amount_paid}}</td>
+                                <td>Rs {{$fee->amount_due}}</td>
                                 <td>{{$fee->created_at}}</td>
 
                             </tr>

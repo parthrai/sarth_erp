@@ -6,6 +6,7 @@ use App\Fee;
 use App\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -21,9 +22,15 @@ class UsersController extends Controller
 
     public function fees(){
 
-        $fees = Fee::with(['course'])->where('student_id',Auth::user()->id)->get();
+        $fees = Fee::with(['course'])->where('student_id',Auth::user()->id)->orderBy('id','desc')->get();
 
         return view('users.fees')->with(['fees'=>$fees]);
+    }
+
+
+    public function test(){
+
+        return Hash::make('fundingportal123');
     }
 
 }

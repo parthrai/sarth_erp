@@ -104,8 +104,8 @@
                                     @foreach($courses as $course)
                                         <tr>
 
-                                            <td><a href="#" >{{$course->id}}</a></td>
-                                            <td><a href="#">{{$course->name}}</a></td>
+                                            <td><a href="/admin/courses/{{$course->id}}" >{{$course->id}}</a></td>
+                                            <td><a href="/admin/courses/{{$course->id}}">{{$course->name}}</a></td>
                                             <td>{{$course->duration}}</td>
                                             <td>Rs {{$course->fees}}</td>
                                             <td>{{$course->created_at}}</td>

@@ -129,7 +129,7 @@
                     <ul class="kt-menu__nav ">
                         <li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="/" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-gear"></i><span class="kt-menu__link-text">Dashboard</span></a></li>
                         <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/tasks" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text">Tasks</span></a></li>
-                        <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/designs" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-layers-1"></i><span class="kt-menu__link-text">Fee</span></a></li>
+                        <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/fees" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-layers-1"></i><span class="kt-menu__link-text">Fee</span></a></li>
                         <li class="kt-menu__item  kt-menu__item" aria-haspopup="true"><a href="/invoices" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-mail-1"></i><span class="kt-menu__link-text">Attendence</span></a></li>
                     </ul>
                 </div>

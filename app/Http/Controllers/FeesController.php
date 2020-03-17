@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Course;
+use App\Enrollment;
 use App\Fee;
 use App\User;
 use Illuminate\Http\Request;
@@ -18,7 +19,10 @@ class FeesController extends Controller
         $students = User::where('type','student')->get();
         $courses = Course::all();
 
-        return view('admin.Fees')->with(['fees'=>$fees,'students'=>$students,'courses'=>$courses]);
+
+        $enrollments = Enrollment::all();
+
+        return view('admin.Fees')->with(['fees'=>$fees,'students'=>$students,'courses'=>$courses,'enrollments'=>$enrollments]);
     }
 
     public function store(Request $request){
