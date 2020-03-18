@@ -21,5 +21,8 @@ class UsersTableSeeder extends Seeder
             $user->password = \Illuminate\Support\Facades\Hash::make('testpass123');
 
         $user->save();
+
+
+        echo 'user added !!';
     }
 }
