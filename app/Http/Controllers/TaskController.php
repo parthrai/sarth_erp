@@ -29,7 +29,7 @@ class TaskController extends Controller
 
         $task = new Task();
         $task->user_id = $request->user_id;
-        $task->user_name = $request->user->name;
+//        $task->user_name = $request->user->name;
         $task->course_name = $request->course_name;
         $task->homework = $request->homework;
 
