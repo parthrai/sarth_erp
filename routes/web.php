@@ -13,7 +13,7 @@
 
 
 
-Route::get('/','Homecontroller@index');
+Route::get('/','HomeController@index');
 
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
